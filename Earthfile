@@ -1,4 +1,7 @@
 VERSION 0.8
+
+# pin Ruby to v3 to avoid compiling grpc from source. The grpc gem is not
+# pre-compiled for v4 yet.
 FROM ruby:3.4.8
 RUN gem install grpc
 
