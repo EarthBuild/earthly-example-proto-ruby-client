@@ -1,6 +1,5 @@
-VERSION 0.6
-FROM ruby:latest
-
+VERSION 0.8
+FROM ruby:3.4.8
 RUN gem install grpc
 
 WORKDIR /kvclient
@@ -14,5 +13,4 @@ kv-ruby-client-docker:
     SAVE IMAGE kv-ruby-client:latest
 
 all:
-    BUILD +lint
     BUILD +kv-ruby-client-docker
